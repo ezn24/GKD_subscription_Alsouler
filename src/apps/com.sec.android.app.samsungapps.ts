@@ -54,5 +54,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '底部广告（国际版）',
+      rules: [
+        {
+          matches: ['@[vid="do_not_show_again_area_text"]'],
+          fastQuery: true,
+          snapshotUrls: ['https://i.gkd.li/i/22320803'],
+          activityIds: [
+            'com.sec.android.app.samsungapps.SamsungAppsMainActivity',
+          ],
+        },
+      ],
+    },
   ],
 });
