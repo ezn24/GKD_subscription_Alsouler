@@ -45,5 +45,30 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '功能类-自动授权登录',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          snapshotUrls: ['https://i.gkd.li/i/24838083'],
+          activityIds: [
+            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
+          ],
+          matches: ['[text="同意"][visibleToUser=true]'],
+        },
+        {
+          preKeys: [1],
+          name: '点击确认',
+          fastQuery: true,
+          snapshotUrls: ['https://i.gkd.li/i/24838130'],
+          activityIds: [
+            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
+          ],
+          matches: ['[text="确认"][visibleToUser=true]'],
+        },
+      ],
+    },
   ],
 });
