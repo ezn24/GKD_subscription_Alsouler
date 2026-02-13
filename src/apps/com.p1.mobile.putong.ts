@@ -41,5 +41,45 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '弹窗广告（Play版）',
+      matchTime: 10000,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: ['@[vid="negative"]'],
+          fastQuery: true,
+          activityIds: ['com.p1.mobile.putong.core.newui.main.NewMainAct'],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '滑动广告（Play版）',
+      desc: '注意：有几率会在广告出现之前开始运作，请谨慎使用！',
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: ['@[vid="bt_skip"]'],
+          fastQuery: true,
+          activityIds: ['com.p1.mobile.putong.core.newui.main.NewMainAct'],
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '充值 VIP 广告（Play版）',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: ['@[vid="close"]'],
+          fastQuery: true,
+          activityIds: ['com.p1.mobile.putong.core.newui.main.NewMainAct'],
+        },
+      ],
+    },
   ],
 });
